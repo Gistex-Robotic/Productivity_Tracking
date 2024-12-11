@@ -1,3 +1,4 @@
+# 1 "C:\\Users\\PC-P005\\Documents\\Arduino\\Project\\Productivity_Tracking\\Productivity_Tracking.ino"
 // Define pins
 const int buttonPin = 2;
 
@@ -5,11 +6,11 @@ const int buttonPin = 2;
 unsigned long nonEfficientTime = 0;
 unsigned long efficientTime = 0;
 unsigned long previousMillis = 0;
-bool lastButtonState = HIGH; // Last known state of the button (HIGH = not pressed)
+bool lastButtonState = 0x1; // Last known state of the button (HIGH = not pressed)
 
 void setup() {
-  pinMode(buttonPin, INPUT_PULLUP); // Use internal pull-up resistor
-  Serial.begin(115200);              // Start Serial Monitor
+  pinMode(buttonPin, 0x2); // Use internal pull-up resistor
+  Serial.begin(115200); // Start Serial Monitor
 }
 
 void loop() {
@@ -19,15 +20,15 @@ void loop() {
   bool currentButtonState = digitalRead(buttonPin);
 
   // If the button is released (transition from LOW to HIGH), reset the timers
-  if (lastButtonState == LOW && currentButtonState == HIGH) {
-    
+  if (lastButtonState == 0x0 && currentButtonState == 0x1) {
+
     nonEfficientTime = 0;
     efficientTime = 0;
     Serial.println("Times reset!");
   }
 
   // Update the time calculations
-  if (currentButtonState == LOW) {
+  if (currentButtonState == 0x0) {
     // Button pressed, calculate efficiency time
     efficientTime += currentMillis - previousMillis;
   } else {

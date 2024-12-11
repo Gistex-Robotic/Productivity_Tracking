@@ -1,3 +1,5 @@
+#include <Arduino.h>
+#line 1 "C:\\Users\\PC-P005\\Documents\\Arduino\\Project\\Productivity_Tracking\\Productivity_Tracking.ino"
 // Define pins
 const int buttonPin = 2;
 
@@ -7,6 +9,11 @@ unsigned long efficientTime = 0;
 unsigned long previousMillis = 0;
 bool lastButtonState = HIGH; // Last known state of the button (HIGH = not pressed)
 
+#line 10 "C:\\Users\\PC-P005\\Documents\\Arduino\\Project\\Productivity_Tracking\\Productivity_Tracking.ino"
+void setup();
+#line 15 "C:\\Users\\PC-P005\\Documents\\Arduino\\Project\\Productivity_Tracking\\Productivity_Tracking.ino"
+void loop();
+#line 10 "C:\\Users\\PC-P005\\Documents\\Arduino\\Project\\Productivity_Tracking\\Productivity_Tracking.ino"
 void setup() {
   pinMode(buttonPin, INPUT_PULLUP); // Use internal pull-up resistor
   Serial.begin(115200);              // Start Serial Monitor

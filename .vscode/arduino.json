@@ -1,0 +1,7 @@
+{
+    "port": "COM6",
+    "board": "arduino:avr:uno",
+    "programmer": "avrisp",
+    "sketch": "Productivity_Tracking.ino",
+    "output": "./build" 
+}

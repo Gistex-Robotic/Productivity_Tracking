@@ -1,0 +1,8 @@
+#line 1 "C:\\Users\\PC-P005\\Documents\\Arduino\\Project\\Productivity_Tracking\\.vscode\\arduino.json"
+{
+    "port": "COM6",
+    "board": "arduino:avr:uno",
+    "programmer": "avrisp",
+    "sketch": "Productivity_Tracking.ino",
+    "output": "./build" 
+}
