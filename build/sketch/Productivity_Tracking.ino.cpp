@@ -27,7 +27,6 @@ void loop() {
 
   // If the button is released (transition from LOW to HIGH), reset the timers
   if (lastButtonState == LOW && currentButtonState == HIGH) {
-    
     nonEfficientTime = 0;
     efficientTime = 0;
     Serial.println("Times reset!");
@@ -35,7 +34,7 @@ void loop() {
 
   // Update the time calculations
   if (currentButtonState == LOW) {
-    // Button pressed, calculate efficiency time
+    // Button pressed, calculate efficiency timex
     efficientTime += currentMillis - previousMillis;
   } else {
     // Button not pressed, calculate non-efficiency time
